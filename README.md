@@ -57,26 +57,18 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-## Running the Test scripts
-
-```
-python manage.py runserver
-```
-
-And the project is ready for use on your computer!
-
-## Running the Test scripts
-
-There are 4 files named login, registration, Patient and Vitals in the tests folder.In each file there will be classes.To executetest cases run the below commnad
-```
-python manage.py test api.tests.[classname]
-```
-
 <br>
 
 ## Assumptions 
 
 + One-to-One Relationship: Users to Patients : Each user can have only one patient profile, and each patient is linked to a single user account.
   
-+ One-to-Many Relationship: Patients to Heart Rate Details : Each patient can have multiple heart rate records associated with them.
++ One-to-Many Relationship: Patients to Vitals Details : Each patient can have multiple Vitals records associated with them.
+  
+## Running the Test scripts
+
+There are 4 files named login, registration, Patient and Vitals in the tests folder.In each file there will be classes.To executetest cases run the below commnad
+```
+python manage.py test api.tests.[classname]
+```
 

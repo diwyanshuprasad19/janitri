@@ -76,11 +76,7 @@ python manage.py test api.tests.[classname]
 
 ## Assumptions 
 
-+ Data Relationships:
-+ One-to-One Relationship: Users to Patients
-
-+ Each user can have only one patient profile, and each patient is linked to a single user account.
-+ One-to-Many Relationship: Patients to Heart Rate Details
-
-+ Each patient can have multiple heart rate records associated with them.
++ One-to-One Relationship: Users to Patients : Each user can have only one patient profile, and each patient is linked to a single user account.
+  
++ One-to-Many Relationship: Patients to Heart Rate Details : Each patient can have multiple heart rate records associated with them.
 

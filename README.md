@@ -7,15 +7,15 @@ Api assignemnt by Janitri
 + Django Rest Framework
 
 ### Additional Python Modules Required:: 
-1)-Django
-2)-Django Rest Framework
++ Django
++ Django Rest Framework
 
 ### Goal:Create Endpoint 
-1)- User Registration and Login : For registration and login you can consider
++  User Registration and Login : For registration and login you can consider
 email and password validation, no need to use any authentication or
 authorization protocols, just match the email and password.
-2)- Manage Patients : Endpoint to add a patient, and to retrieve patient details.
-3)- Heart rate details : Endpoint to record and retrieve heart rate data for
++  Manage Patients : Endpoint to add a patient, and to retrieve patient details.
++  Heart rate details : Endpoint to record and retrieve heart rate data for
 patients.
 
 ## Prerequisite

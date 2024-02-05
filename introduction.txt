@@ -1,0 +1,77 @@
+○ Instructions on how to setup and run your project.
+1.Downaload the code from github repository.Unzip it.
+2.Open the unzipped file to a local ide(preferably Visual studio code)
+3.Open terminal and install python(pip install python),django(pip install django)
+,djangorest framework(pip install djangorestframework)
+4.open app by typing on terminal :cd api
+5.run on terminal:
+python manage.py makemigrations:This will create migration files in your app's migrations 
+directory that represent the changes you've made.
+python manage.py migrate:This will execute the migration files and update your
+ database accordingly.
+6.python manage.py createsuperuser:create a superuser so that you can access
+admin for the database.Fill username,email and password.
+7.to run server:python manage.py runserver it will open the server.
+for api type /api in url and admin type:/admin
+8.Use api according to thier requirment
+
+
+sql:sql lite
+django versio:5.0.1
+
+
+○ Any assumptions or decision you made in this project.
+UserData Model:
+
+Fields:
+email: EmailField (unique)
+password: CharField (max_length=128)
+firstname: CharField (max_length=128)
+lastname: CharField (max_length=128)
+contact: CharField (max_length=20)
+role: CharField (max_length=1, choices=[('D', 'Doctor'), ('N', 'Nurse'), ('P', 'Patient')])
+Patient Model:
+
+Fields:
+user: OneToOneField to UserData (on_delete=models.CASCADE)
+firstname: CharField (max_length=128)
+lastname: CharField (max_length=128)
+email: EmailField (unique)
+contact: CharField (max_length=20)
+date_of_birth: DateField
+gender: CharField (max_length=1, choices=[('M', 'Male'), ('F', 'Female'), ('O', 'Other')])
+address: TextField
+medical_history: TextField (blank=True, null=True)
+date_created: DateTimeField (auto_now_add=True)
+date_updated: DateTimeField (auto_now=True)
+Vitals Model:
+
+Fields:
+patient: ForeignKey to Patient (on_delete=models.CASCADE)
+paramtype: CharField (max_length=128, default='')
+paramvalue: TextField (default='')
+timestamp: DateTimeField (auto_now_add=True)
+Relationships:
+
+UserData and Patient have a one-to-one relationship, meaning each UserData instance corresponds to exactly one Patient instance, and vice versa.
+Patient and Vitals have a one-to-many relationship, meaning each Patient instance can have multiple associated Vitals instances, but each Vitals instance belongs to exactly one Patient.
+This structure allows for storing user data, pat
+○ API documentation.
+each has earlier url as /api/
+
+1. /userdata/  :Just for getting all the user data.Just for reference.
+2. /register/  :It is for signup user with post data(username,email,password).
+It also has error handling and validation for username,email and password.
+3. /login   :It is for checking using post data that correct email and password been sent.
+It just match the email and password.It also has error handling and validation for email and password.
+4. /patient/ : Just for getting all the patient data.Just for reference .
+5. /patientadd/:It is for adding patien data using post data(name of patient).
+It also has error handling and validation for name and errors.
+6. /patient/<str:pk>/ : It is for getting patient with his unique pk number
+7. /vitals/ :Just for getting all the heartrate data.Just for reference .
+8. /patient/<str:pk>/heartadd/ : It is for adding heartbeat of the current patient with patien pk as
+foriegn key
+9. /patient/<str:pk>/heartshow/ : it is for getting  heartbeat data of the patient using the patient 
+pk number
+
+

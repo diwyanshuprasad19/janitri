@@ -1,0 +1,55 @@
+API Overview Endpoint:
+
+Path: /
+View Function: apiOverview
+Purpose: Provides an overview of the available API endpoints.
+User Data Endpoint:
+
+Path: /userdata/
+View Function: userdata
+Purpose: retrieve all the data related to userData model.
+User Registration Endpoint:
+
+Path: /register/
+View Function: register
+Purpose: Handles user registration.
+User Login Endpoint:
+
+Path: /login/
+View Function: login
+Purpose: Handles user login.
+All Patients Endpoint:
+
+Path: /patient/
+View Function: patientall
+Purpose: Retrieves data for all patients.
+Add Patient Endpoint:
+
+Path: /patientadd/
+View Function: addpatient
+Purpose: Adds a new patient.
+Single Patient Endpoint:
+
+Path: /patient/<str:pk>/
+View Function: patientone
+Purpose: Retrieves data for a specific patient identified by pk.
+All Vitals Endpoint:
+
+Path: /vitals/
+View Function: vitalsall
+Purpose: Retrieves data for all vitals.
+Add Vitals to Patient Endpoint:
+
+Path: /patient/<str:pk>/heartadd/
+View Function: add_vitals_to_patient
+Purpose: Adds vitals data for a specific patient identified by pk.
+Show Heart Rate Endpoint:
+
+Path: /patient/<str:pk>/heartshow/
+View Function: patientvitals
+Purpose: Retrieves vitals data (specifically heart rate) for a specific patient identified by pk.
+Regarding the models:
+
+UserData Model: Represents user data with fields such as email, password, firstname, lastname, contact, and role.
+Patient Model: Represents patient data with fields such as user (OneToOneField to UserData), firstname, lastname, email, contact, date_of_birth, gender, address, medical_history, date_created, and date_updated.
+Vitals Model: Represents vitals data with fields such as patient (ForeignKey to Patient), paramtype, paramvalue, and timestamp.

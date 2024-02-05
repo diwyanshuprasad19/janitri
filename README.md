@@ -74,3 +74,10 @@ python manage.py test api.tests.[classname]
 
 <br>
 
+````
+## Running the Test scripts
+
+Models:
+UserData,Patient,Vitals
+There an one to one relationship between UserData and Patient.
+There is one to many relationship between Patient and Vitals

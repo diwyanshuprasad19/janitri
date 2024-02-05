@@ -2,9 +2,9 @@
 Api assignemnt by Janitri
 
 ### Technologies Used: 
-1)-Python
-2)-Django
-3)-Django Rest Framework
++ Python
++ Django
++ Django Rest Framework
 
 ### Additional Python Modules Required:: 
 1)-Django

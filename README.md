@@ -1,37 +1,41 @@
-# Django-Blog
-A simple django project
+# Django-Assignemnt
+Api assignemnt by Janitri
 
-### Live Preview: http://emrekahriman.pythonanywhere.com/
-<br>
+### Technologies Used: 
+Python
+Django
+Django Rest Framework
+
+### Additional Python Modules Required:: 
+Django
+Django Rest Framework
+
+### Goal:Create Endpoint 
+● User Registration and Login : For registration and login you can consider
+email and password validation, no need to use any authentication or
+authorization protocols, just match the email and password.
+● Manage Patients : Endpoint to add a patient, and to retrieve patient details.
+● Heart rate details : Endpoint to record and retrieve heart rate data for
+patients.
+
+## Prerequisite
+Python 
 
 ## Installing
 
 Step by step commands on how to run this project on your computer
 
-1)- Install Virtualenv
+1)- Install Django
 
 ```
-pip install virtualenv
+ pip install django
 ```
 
-2)- Create Virtualenv
+2)- Create django RestFramework
 
 ```
-virtualenv venv
+pip install djangorestframework
 ```
-
-3)- Activate virtual env
-
-```
-venv/Scripts/activate
-```
-
-4)- Install requirements
-
-```
-pip install -r requirements.txt
-```
-Note: Above lines are required for first time installation
 
 5)- Execute below commands
 
@@ -47,40 +51,27 @@ Note: Above commands should be executed if there is any db level changes
 python manage.py createsuperuser
 ```
 
-7)- Collect static files in one location.
-
-```
-python manage.py collectstatic
-```
-<br>
-
-## Running the tests
+## Running the server
 
 ```
 python manage.py runserver
 ```
+
+## Running the Test scripts
+
+```
+python manage.py runserver
+```
+
 And the project is ready for use on your computer!
+
+## Running the Test scripts
+
+There are 4 files named login, registration, Patient and Vitals in the tests folder.In each file there will be classes.to run test
+```
+python manage.py test api.tests.[classname]
+```
+This will run all the test case present in the above 4 files.
 
 <br>
 
-## Screenshots of the project
-
-Home Page:
-
-![home](https://user-images.githubusercontent.com/59236526/112477888-7b5faf80-8d84-11eb-87c9-3c37fa112670.jpg)
-
-Posts Page:
-
-![allposts](https://user-images.githubusercontent.com/59236526/112477894-7c90dc80-8d84-11eb-8fd8-5f8d3505a6d5.jpg)
-
-Authors Page:
-
-![authors](https://user-images.githubusercontent.com/59236526/112477900-7dc20980-8d84-11eb-9d2b-d0193387bc51.jpg)
-
-Post Create Page:
-
-![post-create](https://user-images.githubusercontent.com/59236526/112477906-7ef33680-8d84-11eb-9a28-1e61def15dbd.jpg)
-
-Post Update Page:
-
-![update-post](https://user-images.githubusercontent.com/59236526/112477911-80246380-8d84-11eb-9730-7660b4763080.jpg)

@@ -67,11 +67,10 @@ And the project is ready for use on your computer!
 
 ## Running the Test scripts
 
-There are 4 files named login, registration, Patient and Vitals in the tests folder.In each file there will be classes.to run test
+There are 4 files named login, registration, Patient and Vitals in the tests folder.In each file there will be classes.To executetest cases run the below commnad
 ```
 python manage.py test api.tests.[classname]
 ```
-This will run all the test case present in the above 4 files.
 
 <br>
 
